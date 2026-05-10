@@ -1,10 +1,81 @@
 {
-  "defaultInputModes": ["text/plain"],
-  "defaultOutputModes": ["text/plain"],
+  "name": "deposit",
+  "url": "http://127.0.0.1:8000/a2a/deposit",
+  "description": "Agent that can handle deposit accounts, balances, transaction details, and last payment inquiries",
+  "version": "1.0.0",
+  "defaultInputModes": [
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "text/plain"
+  ],
   "capabilities": {
     "streaming": false,
     "functions": true
   },
   "skills": [
+    {
+      "id": "get_account_balance",
+      "name": "Get Account Balance",
+      "description": "Retrieve the current balance of an account.",
+      "tags": [
+        "Deposit",
+        "Balance"
+      ],
+      "examples": [
+        "What is the current balance of my vacation account?",
+        "Balance of my primary account?"
+      ]
+    },
+    {
+      "id": "list_accounts",
+      "name": "List Accounts",
+      "description": "Retrieve the list of available accounts.",
+      "tags": [
+        "Deposit",
+        "Accounts"
+      ],
+      "examples": [
+        "List all my accounts."
+      ]
+    },
+    {
+      "id": "get_transaction_details",
+      "name": "Get Transaction Details",
+      "description": "Retrieve transaction details for an account filtered by transaction description.",
+      "tags": [
+        "Deposit",
+        "Transactions"
+      ],
+      "examples": [
+        "Show my grocery transaction details for my primary account.",
+        "Find the Hotel transaction in my vacation account."
+      ]
+    },
+    {
+      "id": "get_last_payment",
+      "name": "Get Last Payment",
+      "description": "Retrieve the most recent outgoing payment for an account.",
+      "tags": [
+        "Deposit",
+        "Payments"
+      ],
+      "examples": [
+        "What was my most recent payment on my primary account?",
+        "Show the last payment on my vacation account."
+      ]
+    },
+    {
+      "id": "check_deposit_sufficient",
+      "name": "Check Deposit Sufficient",
+      "description": "Check if the sum of all deposit account balances is greater than a given value.",
+      "tags": [
+        "Deposit",
+        "Sufficient"
+      ],
+      "examples": [
+        "{\"minimum_deposit_balance\": 250000}"
+      ]
+    }
   ]
 }

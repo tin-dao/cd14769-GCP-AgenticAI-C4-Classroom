@@ -1,10 +1,45 @@
 {
-  "defaultInputModes": ["text/plain"],
-  "defaultOutputModes": ["text/plain"],
+  "name": "loan",
+  "url": "http://127.0.0.1:8000/a2a/loan",
+  "description": "Agent that can handle loan accounts and loan requests",
+  "version": "1.0.0",
+  "defaultInputModes": [
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "text/plain"
+  ],
   "capabilities": {
     "streaming": false,
     "functions": true
   },
   "skills": [
+    {
+      "id": "get_loan_balance",
+      "name": "Get Loan Balance",
+      "description": "Retrieve the current balance of a loan account.",
+      "tags": [
+        "Loan",
+        "Balance"
+      ],
+      "examples": [
+        "What is the current balance of my personal loan?",
+        "Balance of my auto loan?"
+      ]
+    },
+    {
+      "id": "loan_request_handler",
+      "name": "Loan Request Handler",
+      "description": "Handle loan applications.",
+      "tags": [
+        "Loan",
+        "Application"
+      ],
+      "examples": [
+        "I'd like to get a $500 personal loan",
+        "Can I have a $20,000 auto loan?",
+        "Apply for a $1,000,000 house loan"
+      ]
+    }
   ]
 }

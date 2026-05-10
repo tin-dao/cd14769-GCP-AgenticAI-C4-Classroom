@@ -18,9 +18,24 @@ with open(instruction_file_path, "r") as f:
 tools=[
 ]
 
+# Define the remote A2A agent for deposit
+# Assuming the deposit agent is running on 127.0.0.1:8000/a2a/deposit
+deposit_agent = RemoteA2aAgent(
+  name="deposit_agent",
+  agent_card=f"http://127.0.0.1:8000/a2a/deposit{AGENT_CARD_WELL_KNOWN_PATH}"
+)
+
+# Define the remote A2A agent for loan
+# Assuming the loan agent is running on 127.0.0.1:8000/a2a/loan
+loan_agent = RemoteA2aAgent(
+  name="loan_agent",
+  agent_card=f"http://127.0.0.1:8000/a2a/loan{AGENT_CARD_WELL_KNOWN_PATH}"
+)
+
 # Set up other agents that we can delegate to
 sub_agents=[
-  # TODO: Add sub-agents
+  deposit_agent,
+  loan_agent
 ]
 
 # Use the Gemini 2.5 Flash model since it performs quickly
@@ -28,4 +43,11 @@ sub_agents=[
 model = "gemini-2.5-flash"
 
 # Create our agent
-root_agent = # TODO: Implement root agent
+root_agent = Agent(
+  name="bank_agent",
+  description="Bank agent orchestrator.",
+  instruction=instruction,
+  model=model,
+  tools=tools,
+  sub_agents=sub_agents,
+)

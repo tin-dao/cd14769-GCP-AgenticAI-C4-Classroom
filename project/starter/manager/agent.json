@@ -1,9 +1,34 @@
-  "defaultInputModes": ["text/plain"],
-  "defaultOutputModes": ["text/plain"],
+{
+  "name": "Bank Manager",
+  "url": "http://127.0.0.1:8000/a2a/manager",
+  "description": "Bank manager agent",
+  "version": "1.0.0",
+  "defaultInputModes": [
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "text/plain"
+  ],
   "capabilities": {
     "streaming": false,
     "functions": true
   },
   "skills": [
+    {
+      "id": "bank_manager",
+      "name": "Bank Manager",
+      "description": "Manages bank accounts, delegates to the appropriate specialized agents for deposit, loan accounts, new loan applications.",
+      "tags": [
+        "bank",
+        "accounts"
+      ],
+      "examples": [
+        "What is the current balance of my vacation account?",
+        "What is the current balance of my personal loan?",
+        "I'd like to get a $500 personal loan",
+        "Can I have a $20,000 auto loan?",
+        "Apply for a $1,000,000 house loan"
+      ]
+    }
   ]
 }

@@ -8,4 +8,21 @@ sources:
     password: ${MYSQL_PASSWORD}
 
 tools:
-  # TODO
+  get-loan-balance:
+    kind: mysql-sql
+    source: loan
+    description:
+      Gets the balance value of a loan account by its type/name.
+    parameters:
+      - name: name
+        type: string
+        description: The type/name of the loan account to get the balance for such as "auto" or "personal".
+    statement:
+      SELECT * FROM loans WHERE loan_type = ?;
+  get-total-outstanding-balance:
+    kind: mysql-sql
+    source: loan
+    description:
+      Gets the total outstanding balance of all loans.
+    statement:
+      SELECT SUM(outstanding_balance) FROM loans; 

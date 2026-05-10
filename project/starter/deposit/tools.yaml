@@ -7,4 +7,65 @@ sources:
     user: ${MYSQL_USER}
     password: ${MYSQL_PASSWORD}
 tools:
-  # TODO
+  get-account-balance:
+    kind: mysql-sql
+    source: deposit
+    description:
+      Gets the balance value of an account by its name.
+    parameters:
+      - name: name
+        type: string
+        description: The name of the account to get the balance for such as "primary" or "vacation".
+    statement:
+      SELECT balance FROM accounts WHERE account_type = ?;
+  list-accounts:
+    kind: mysql-sql
+    source: deposit
+    description:
+      Gets the list of available accounts.
+    statement:
+      SELECT account_type FROM accounts;
+  get-transaction-details:
+    kind: mysql-sql
+    source: deposit
+    description:
+      Gets the transaction details of an account with transaction description.
+    parameters:
+      - name: account_type
+        type: string
+        description: The name of the account to get the transaction details for such as "primary" or "vacation".
+      - name: description
+        type: string
+        description: The description of the transaction to filter for such as "Hotel" or "Groceries".
+    statement:
+      SELECT a.id AS account_id, a.account_type, t.transaction_date, t.amount, t.description
+      FROM accounts a
+      JOIN transactions t ON t.account_id = a.id
+      WHERE a.account_type = ? AND t.description = ?;
+  get-last-payment:
+    kind: mysql-sql
+    source: deposit
+    description:
+      Gets the last payment details of an account.
+    parameters:
+      - name: account_type
+        type: string
+        description: The name of the account to get the last payment for such as "primary" or "vacation".
+    statement:
+      SELECT a.id AS account_id, a.account_type, t.transaction_date, t.amount, t.description
+      FROM accounts a
+      JOIN transactions t ON t.account_id = a.id
+      WHERE a.account_type = ? AND t.amount < 0
+      ORDER BY t.transaction_date DESC
+      LIMIT 1;
+  check-deposit-sufficient:
+    kind: mysql-sql
+    source: deposit
+    description:
+      Checks if the sum of all the deposit account balances is greater than a given value
+    parameters:
+      - name: value
+        type: float
+        description: The value to compare the sum of all the deposit account balances against.
+    statement:
+      SELECT (CASE WHEN SUM(balance) > ? THEN true ELSE false END) AS result FROM accounts;
