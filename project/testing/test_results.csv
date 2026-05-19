@@ -1,20 +1,26 @@
 msg-001-1,Your current balance on the vacation account is 1500.00.
-msg-002-1,Could you please specify if you are asking about your deposit account balance or your loan balance?
-msg-002-2,Your current balance for your primary account is 5230.50.
-msg-003-1,You have a total of 6730.50 on deposit.
-msg-004-1,I was unable to retrieve your last payment. Can you please clarify which account you are referring to?
-msg-005-1,You paid 200.00 to the hotel on your vacation.
-msg-006-1,I can't directly add money to your account. Please contact customer support or use your bank's online portal to make transfers.
-msg-007-1,I have reviewed your loan application. I'm pleased to inform you that your loan for $100 has been approved! A loan officer will be in touch with you shortly to finalize the details and proceed. Congratulations!
-msg-007-2,"Thank you for your interest in a loan. I have reviewed your application for $10,000, and unfortunately, we are unable to approve this request at this time. We appreciate your understanding."
-msg-008-1,Great news! Your loan application has been approved. A loan officer will be in touch with you shortly to finalize the details and guide you through the next steps. Congratulations!
-msg-008-2,Great news! Your loan application has been approved. A loan officer will be in touch with you shortly to finalize the details and guide you through the next steps. Congratulations!
-msg-009-1,"Thank you for your loan application. After carefully reviewing your request, we regret to inform you that we are unable to approve your loan at this time. We understand this may be disappointing, and we appreciate you considering us for your financial needs."
-msg-010-1,"Congratulations! We've reviewed your loan application, and I'm happy to inform you that your request for a $10,000 auto loan has been approved.
+msg-002-1,I can help with that! Are you asking about your deposit account balance or your loan balance?
+msg-002-2,The balance for your primary account is $5230.50.
+msg-003-1,"I cannot provide you with a total sum of all your deposit accounts. However, I can list your individual accounts and their balances. Would you like me to do that?"
+msg-004-1,The last payment information for your main account is not available.
+msg-005-1,You paid 200.00 for the hotel on your vacation.
+msg-006-1,I cannot directly add funds to your account. I can only provide information about your deposit accounts. Please visit a branch or use your bank's online banking or mobile app to deposit funds.
+msg-007-1,I have reviewed your loan application. I'm pleased to inform you that your loan for $100 has been approved! A loan officer will be in touch with you shortly to finalize the details and proceed.
+msg-007-2,"I've reviewed your request for a $10,000 loan. Unfortunately, we're unable to approve this particular application at this time.
 
-A loan officer will be contacting you shortly to discuss the next steps and finalize the details. We're excited to help you get that new car!"
-msg-011-1,"Your next auto payment is due on October 01, 2025."
-msg-012-1,"Your outstanding balance on your personal loan is $10,159.25. Your next payment of $359.19 is due on October 15, 2025."
-msg-013-1,"To help you with that, could you please tell me what type of loan you are asking about (e.g., auto loan, personal loan, mortgage)?"
-msg-014-1,"Hello! I can help you with inquiries about your deposit and loan accounts. Could you please specify what aspects of your financial situation you'd like a summary of? For example, are you interested in your deposit account balances, loan details, or both?"
-msg-015-1,"I can help you with your deposit account balances, but I cannot access information about your loans. Would you like me to proceed with getting your deposit account balances?"
+We understand this might not be the news you were hoping for, and we appreciate you considering us for your lending needs."
+msg-008-1,Great news! Your loan application has been approved. A loan officer will be in touch with you shortly to finalize the details and guide you through the next steps. Congratulations!
+msg-008-2,"That sounds like an exciting purchase! Is there anything else I can assist you with regarding your banking needs, perhaps related to your deposit accounts or other loan inquiries?"
+msg-009-1,Thank you for your loan application! I'm pleased to inform you that your loan has been approved. A loan officer will be contacting you shortly to discuss the next steps and finalize everything. Congratulations on your new home!
+msg-010-1,"Thank you for your patience while we reviewed your loan application.
+
+I'm pleased to inform you that your auto loan application has been approved! A loan officer will be in touch with you shortly to finalize the details and proceed with your loan.
+
+Congratulations!"
+msg-011-1,"Your next auto payment is due on October 1, 2025."
+msg-012-1,"You currently owe $10,159.25 on your personal loan. Your next payment of $359.19 is due on October 15, 2025."
+msg-013-1,"Could you please specify which loan type you'd like to check? For example, ""auto loan"" or ""personal loan."""
+msg-014-1,"I can help you with inquiries about your deposit and loan accounts. To give you a summary, could you please specify whether you'd like to know about your deposit balances, loan details, or both?"
+msg-015-1,"I cannot provide the total balance across all your accounts. However, I can show you the balance of each individual account if you'd like.
+
+Regarding your loans, I can only provide support for deposit accounts. Please refer to the appropriate banking department for assistance with loan-related inquiries."
